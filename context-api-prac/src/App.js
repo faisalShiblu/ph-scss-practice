@@ -1,17 +1,19 @@
-import { useState } from 'react';
+import { createContext, useState } from 'react';
 import './App.css';
 import Header from './Components/Header';
 import Home from './Components/Home';
 import Shipment from './Components/Shipment';
 
+export const CategoryContext = createContext();
+
 function App() {
   const [count, setCount] = useState(0);
   return (
-    <div>
+    <CategoryContext.Provider value={count}>
       <Header count={count} setCount={setCount} />
-      <Home count={count} />
+      <Home />
       <Shipment />
-    </div>
+    </CategoryContext.Provider >
   );
 }
 

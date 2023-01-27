@@ -7,7 +7,7 @@ import Shipment from './Components/Shipment';
 export const CategoryContext = createContext();
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState('laptop');
   return (
     <CategoryContext.Provider value={[count, setCount]}>
       <Header />

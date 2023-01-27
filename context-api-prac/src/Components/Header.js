@@ -6,7 +6,9 @@ const Header = (props) => {
     return (
         <div>
             <h1>This is header : {category}</h1>
-            <button onClick={() => setCount(category + 1)}>+=</button>
+            <button onClick={() => setCount('laptop')}>laptop</button>
+            <button onClick={() => setCount('mobile')}>mobile</button>
+            <button onClick={() => setCount('camera')}>camera</button>
         </div>
     );
 };
